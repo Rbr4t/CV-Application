@@ -1,0 +1,7 @@
+div {
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    padding: 10px;
+}
+

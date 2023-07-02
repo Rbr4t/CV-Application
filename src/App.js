@@ -1,9 +1,20 @@
+import GeneralInfo from "./components/General";
+import Skills from "./components/Skills";
+import './index.css'
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello World!</h1>
-    </div>
+    <main>
+      <form className="edit">
+        <GeneralInfo />
+        <Skills />
+      </form>
+
+      <div className="cv">
+        <h1>Data displayed here</h1>
+      </div>
+    </main>
+    
   );
 }
 
