@@ -88,6 +88,7 @@ class GeneralCV extends Component {
     }
 
     render() {
+        
         if(this.props.props !== null) {
             return (
                 <div>
