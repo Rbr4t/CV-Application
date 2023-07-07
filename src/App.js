@@ -1,6 +1,7 @@
 import { GeneralCV, GeneralInfo } from "./components/General";
 import Skills, { SkillsCV } from "./components/Skills";
 import Education, { EducationCV } from "./components/Education";
+import Experience, { ExperienceCV } from "./components/PrevExperiance";
 import { useState } from "react";
 import './index.css'
 
@@ -8,7 +9,8 @@ function App() {
   const [data, setValue] = useState({
     "general": null,
     "skills": null,
-    "education": null
+    "education": null,
+    "experience": null
     }
   );
 
@@ -22,6 +24,10 @@ function App() {
 
   const myCallBackEducation = (dataFromChild) => {
     setValue({...data, education: dataFromChild})
+  } 
+
+  const myCallBackExperience = (dataFromChild) => {
+    setValue({...data, experience: dataFromChild})
   } 
 
   return (
@@ -42,6 +48,10 @@ function App() {
         <div>
           <Education callBackState={myCallBackEducation} />
         </div>
+
+        <div>
+          <Experience callBackState={myCallBackExperience} />
+        </div>
       
       </form>
 
@@ -49,6 +59,7 @@ function App() {
         <GeneralCV props={data.general}/>
         <SkillsCV props={data.skills}/>
         <EducationCV props={data.education}/>
+        <ExperienceCV props={data.experience} />
       </div>
     </main>
     
