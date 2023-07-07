@@ -6,12 +6,10 @@ class Skills extends Component {
       super();
   
       this.state = {
-        skills: [{ skill: 'coding' }, { skill: 'coding2' }],
-        newSkill: '', // Add a new state variable to track the input value
+        skills: [],
       };
   
       this.addSkill = this.addSkill.bind(this);
-      this.handleInputChange = this.handleInputChange.bind(this); // Add an event handler for input change
     }
 
     callBackState(){
@@ -21,14 +19,9 @@ class Skills extends Component {
 
     addSkill(e) {
       e.preventDefault();
-      const newSkills = [...this.state.skills, { skill: this.state.newSkill }];
-      this.setState({ skills: newSkills, newSkill: '' });
+      const newSkills = [...this.state.skills, {skill: ''}];
+      this.setState({ skills: newSkills });
       console.log(this.state)
-      this.callBackState()
-    }
-  
-    handleInputChange(e) {
-      this.setState({ newSkill: e.target.value });
       this.callBackState()
     }
     
@@ -45,6 +38,8 @@ class Skills extends Component {
                   const updatedSkills = [...this.state.skills];
                   updatedSkills[index].skill = e.target.value;
                   this.setState({ skills: updatedSkills });
+                  console.log(this.state)
+                  this.callBackState()
                 }}
               />
             </div>

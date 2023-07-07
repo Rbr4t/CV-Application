@@ -7,10 +7,10 @@ import './index.css'
 
 function App() {
   const [data, setValue] = useState({
-    "general": null,
-    "skills": null,
-    "education": null,
-    "experience": null
+    general: null,
+    skills: null,
+    education: null,
+    experience: null
     }
   );
 
@@ -38,11 +38,8 @@ function App() {
           <GeneralInfo callBackState={myCallBackGeneral} />
         </div>
 
-        
         <div>
          <Skills callBackState={myCallBackSkills} />
-          
-
         </div>
 
         <div>

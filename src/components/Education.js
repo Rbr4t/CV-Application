@@ -39,6 +39,7 @@ class Education extends Component {
                   const updatedschools = [...this.state.schools];
                   updatedschools[index].institution = e.target.value;
                   this.setState({ schools: updatedschools });
+                  this.callBackState()
                 }}
               />
 
@@ -50,6 +51,7 @@ class Education extends Component {
                   const updatedschools = [...this.state.schools];
                   updatedschools[index].type = e.target.value;
                   this.setState({ schools: updatedschools });
+                  this.callBackState()
                 }}
               />
 
@@ -62,6 +64,7 @@ class Education extends Component {
                   const updatedschools = [...this.state.schools];
                   updatedschools[index].period = e.target.value;
                   this.setState({ schools: updatedschools });
+                  this.callBackState()
                 }}
               />
 

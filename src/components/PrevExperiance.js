@@ -40,6 +40,7 @@ class Experience extends Component {
                   const updatedexperiences = [...this.state.experiences];
                   updatedexperiences[index].company = e.target.value;
                   this.setState({ experiences: updatedexperiences });
+                  this.callBackState()
                 }}
               />
 
@@ -51,6 +52,7 @@ class Experience extends Component {
                   const updatedexperiences = [...this.state.experiences];
                   updatedexperiences[index].role = e.target.value;
                   this.setState({ experiences: updatedexperiences });
+                  this.callBackState()
                 }}
               />
 
@@ -63,6 +65,7 @@ class Experience extends Component {
                   const updatedexperiences = [...this.state.experiences];
                   updatedexperiences[index].period = e.target.value;
                   this.setState({ experiences: updatedexperiences });
+                  this.callBackState()
                 }}
               />
 
@@ -74,6 +77,7 @@ class Experience extends Component {
                   const updatedexperiences = [...this.state.experiences];
                   updatedexperiences[index].extra = e.target.value;
                   this.setState({ experiences: updatedexperiences });
+                  this.callBackState()
                 }}
               />
 
