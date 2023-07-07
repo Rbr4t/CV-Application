@@ -23,40 +23,37 @@ class GeneralInfo extends Component {
         this.props.callBackState(this.state);
       }
 
-    async changeName(e) {
+    changeName(e) {
         e.preventDefault();
-        await this.setState({
+        this.setState({
           ...this.state,
           name: e.target.value
-        });
-        this.callBackState()
+        }, () => this.callBackState());
+        
     }
     
-    async changeEmail(e) {
+    changeEmail(e) {
         e.preventDefault();
-        await this.setState({
+        this.setState({
             ...this.state,
             email: e.target.value,
-        });
-        this.callBackState()
+        }, () => this.callBackState());
     }
 
-    async changePhone(e) {
+    changePhone(e) {
         e.preventDefault();
-        await this.setState({
+        this.setState({
             ...this.state,
             phone: e.target.value,
-        });
-        this.callBackState()
+        }, () => this.callBackState());
     }
 
-    async changeAddress(e) {
+    changeAddress(e) {
         e.preventDefault();
-        await this.setState({
+        this.setState({
             ...this.state,
             address: e.target.value,
-        });
-        this.callBackState()
+        }, () => this.callBackState());
     }
 
     render() {
@@ -91,7 +88,6 @@ class GeneralCV extends Component {
     }
 
     render() {
-        console.log(this.props.props.name)
         if(this.props.props !== null) {
             return (
                 <div>
