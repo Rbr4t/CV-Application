@@ -9,14 +9,10 @@ export default class Skills extends Component {
 
     render() {
         return (
-            <div>
-                <h2>Skills</h2>
-                <div className='skill'>
-                    <label htmlFor='skill'>Skill: </label>
-                    <input id='skill' type='text'></input>
-                </div>
+            <div className='skill'>
+                <label htmlFor='skill'>Skill: </label>
+                <input id='skill' type='text'></input>
             </div>
-            
         )
     }
 }
