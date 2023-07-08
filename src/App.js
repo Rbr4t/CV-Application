@@ -58,9 +58,9 @@ function App() {
         <EducationCV props={data.education}/>
         <ExperienceCV props={data.experience} />
       </div>
+
     </main>
-    
   );
-}
+}d
 
 export default App;
