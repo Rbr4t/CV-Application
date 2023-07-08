@@ -1,5 +1,6 @@
 import { Component } from 'react';
-import '../styles/General.css'
+import '../styles/General.css';
+import '../styles/Panel.css';
 
 class GeneralInfo extends Component {
     constructor() {
@@ -9,13 +10,15 @@ class GeneralInfo extends Component {
             name: '',
             email: '',
             phone: '',
-            address: ''
+            address: '',
+            profilePic: ''
         };
       
         this.changeName = this.changeName.bind(this);
         this.changeEmail = this.changeEmail.bind(this);
         this.changePhone = this.changePhone.bind(this);
         this.changeAddress = this.changeAddress.bind(this);
+        this.changeProfilePic = this.changeProfilePic.bind(this);
     }
 
     callBackState(){
@@ -56,6 +59,23 @@ class GeneralInfo extends Component {
         }, () => this.callBackState());
     }
 
+    changeProfilePic(e) {
+        e.preventDefault();
+        console.log(e.target)
+        let reader = new FileReader()
+
+        reader.addEventListener('loadend',() => {
+            console.log(reader.result)
+            this.setState({
+                ...this.state,
+                profilePic: reader.result
+            }, () => this.callBackState())
+        })
+
+        reader.readAsDataURL(e.target.files[0]);
+        
+    }
+
     render() {
         return (
             <div>
@@ -64,7 +84,7 @@ class GeneralInfo extends Component {
                     <input id='name' value={this.state.name} onChange={this.changeName}></input>
       
                     <label htmlFor="profilepic">Profile picture:</label>
-                    <input  type="file" id="profilepic" name="profile"></input>
+                    <input  type="file" accept="image/*" onChange={this.changeProfilePic} id="profilepic" name="profile"></input>
 
                     <label htmlFor='email'>Email: </label>
                     <input type='email' id='email' value={this.state.email} onChange={this.changeEmail}></input>
@@ -91,9 +111,10 @@ class GeneralCV extends Component {
         
         if(this.props.props !== null) {
             return (
-                <div>
+                <div className='panel'>
                     
                     <h1>{this.props.props.name}</h1>
+                    <img src={this.props.props.profilePic} alt='preview'></img>
                     <h1>{this.props.props.email}</h1>
                     <h1>{this.props.props.phone}</h1>
                     <h1>{this.props.props.address}</h1>
