@@ -1,9 +1,15 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 main {
+    
     display: flex;
     flex-direction: row;
-    background-color: gray;
+    background-color: rgba(122, 120, 119, 0.686);
     padding: 10px;
-    
 }
 
 form {
@@ -13,11 +19,22 @@ form {
     min-width: 25%;
 }
 
+form>div {
+    background-color: rgb(86, 117, 209);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
 input {
     background-color: white;
     border: 0;
     border-radius: 5px;
     height: 1.5rem;
+    font-size: large;
+}
+
+input:active, input:focus {
+    outline: 2px solid gray;
 }
 
 input#profilepic {
@@ -42,8 +59,30 @@ input#profilepic {
 .panel-input {
     display: flex;
     flex-direction: column;
+    gap: 1.25rem;
+
 }
 
 .cv {
     min-width: 60%;
+}
+
+button {
+    background-color: #f0f8ff;
+    border: 0;
+    border-radius: 0.2rem;
+    height: 2rem;
+    font-size: medium;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #f0f8ffab;
+}
+
+.basic-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+
 }

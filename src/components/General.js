@@ -86,11 +86,11 @@ class GeneralInfo extends Component {
     render() {
         return (
             
-                <div className='basic-info panel-input'>
+                <div className='basic-info'>
                     <label htmlFor='name'>Full name: </label>
                     <input id='name' value={this.state.name} onChange={this.changeName}></input>
       
-                    <label className='profilepicker' htmlFor="profilepic">Select profile:</label>
+                    <label className='profilepicker' htmlFor="profilepic">Select profile picture:</label>
                     <input type="file" accept="image/*" onChange={this.changeProfilePic} id="profilepic" name="profile"></input>
                     
                     <label htmlFor='email'>Email: </label>
