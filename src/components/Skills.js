@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import '../styles/General.css'
 
 class Skills extends Component {
@@ -6,7 +6,7 @@ class Skills extends Component {
       super();
   
       this.state = {
-        skills: [],
+        skills: [{skill: ''}],
       };
   
       this.addSkill = this.addSkill.bind(this);

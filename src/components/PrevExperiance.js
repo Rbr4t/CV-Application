@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import '../styles/General.css'
 
 class Experience extends Component {
@@ -7,7 +7,6 @@ class Experience extends Component {
   
       this.state = {
         experiences: [{company: '', role: '', period: '', extra: ''}],
-        newExperience: {company: '', role: '', period: '', extra: ''}, // Add a new state variable to track the input value
       };
   
       this.addExperience = this.addExperience.bind(this);
@@ -19,10 +18,8 @@ class Experience extends Component {
 
     addExperience(e) {
       e.preventDefault();
-      const newExperienceArray = [...this.state.experiences, {company: this.state.newExperience.company,
-         role: this.state.newExperience.role, period: this.state.newExperience.period, extra: this.state.newExperience.extra}]
-      this.setState({experiences: newExperienceArray, newExperience:  {company: '', role: '', period: '', extra: ''}})
-      console.log(this.state)
+      const newExperienceArray = [...this.state.experiences, {company: '', role: '', period: '', extra: ''}]
+      this.setState({experiences: newExperienceArray})
       this.callBackState()
     }
     

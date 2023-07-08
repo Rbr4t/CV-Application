@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import '../styles/General.css'
 
 class Education extends Component {
@@ -7,7 +7,6 @@ class Education extends Component {
   
       this.state = {
         schools: [{institution: '', type: '', period: ''}],
-        newEducation: {institution: '', type: '', period: ''}, // Add a new state variable to track the input value
       };
   
       this.addEducation = this.addEducation.bind(this);
@@ -19,9 +18,8 @@ class Education extends Component {
 
     addEducation(e) {
       e.preventDefault();
-      const newEducationArray = [...this.state.schools, {institution: this.state.newEducation.institution, type: this.state.newEducation.type, period: this.state.newEducation.period}]
-      this.setState({schools: newEducationArray, newEducation:  {institution: '', type: '', period: ''}})
-      console.log(this.state)
+      const newEducationArray = [...this.state.schools, {institution: '', type: '', period: ''}]
+      this.setState({schools: newEducationArray})
       this.callBackState()
     }
     
@@ -71,8 +69,6 @@ class Education extends Component {
             </div>
           ))}
   
-          
-            
             <button onClick={this.addEducation}>Add education</button>
         </div>
       );
