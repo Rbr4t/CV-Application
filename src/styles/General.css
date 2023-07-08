@@ -1,7 +1,49 @@
-div {
+main {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     background-color: gray;
     padding: 10px;
+    
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 25%;
+}
+
+input {
+    background-color: white;
+    border: 0;
+    border-radius: 5px;
+    height: 1.5rem;
+}
+
+input#profilepic {
+    visibility: hidden;
+}
+
+.profilepicker {
+    background-color: white;
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: -20px;
+    border: 0;
+    border-radius: 5px;
+    height: 1.5rem;
+    align-items: center;
+}
+
+.profilepicker:hover {
+    cursor: text;
+}
+
+.panel-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.cv {
+    min-width: 60%;
+}

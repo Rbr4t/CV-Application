@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import '../styles/General.css'
+import '../styles/Work.css'
 
 class Experience extends Component {
     constructor() {
@@ -25,10 +26,10 @@ class Experience extends Component {
     
     render() {
       return (
-        <div>
+        <div className='panel-input'>
           {this.state.experiences.map((obj, index) => (
 
-            <div key={index}>
+            <div key={index} className='form-elements'>
               <label htmlFor={`company-${index}`}>Company: </label>
               <input
                 id={`company-${index}`}

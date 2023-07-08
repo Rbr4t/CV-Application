@@ -1,5 +1,7 @@
 import { Component } from 'react';
 import '../styles/General.css'
+import '../styles/Skills.css'
+
 
 class Skills extends Component {
     constructor() {
@@ -27,9 +29,9 @@ class Skills extends Component {
     
     render() {
       return (
-        <div>
+        <div className='panel-input '>
           {this.state.skills.map((skill, index) => (
-            <div key={index}>
+            <div key={index} className='panel-input-field'>
               <label htmlFor={`skill-${index}`}>Skill: </label>
               <input
                 id={`skill-${index}`}

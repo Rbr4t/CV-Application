@@ -1,6 +1,7 @@
 import { Component } from 'react';
-import '../styles/General.css';
+// import '../styles/General.css';
 import '../styles/Panel.css';
+import logo from '../styles/default.jpg'
 
 class GeneralInfo extends Component {
     constructor() {
@@ -11,7 +12,7 @@ class GeneralInfo extends Component {
             email: '',
             phone: '',
             address: '',
-            profilePic: ''
+            profilePic: '' || logo
         };
       
         this.changeName = this.changeName.bind(this);
@@ -65,10 +66,16 @@ class GeneralInfo extends Component {
         let reader = new FileReader()
 
         reader.addEventListener('loadend',() => {
-            console.log(reader.result)
             this.setState({
                 ...this.state,
                 profilePic: reader.result
+            }, () => this.callBackState())
+        })
+
+        reader.addEventListener('error', () => {
+            this.setState({
+                ...this.state,
+                profilePic: logo
             }, () => this.callBackState())
         })
 
@@ -78,14 +85,14 @@ class GeneralInfo extends Component {
 
     render() {
         return (
-            <div>
-                <div className='basic-info'>
+            
+                <div className='basic-info panel-input'>
                     <label htmlFor='name'>Full name: </label>
                     <input id='name' value={this.state.name} onChange={this.changeName}></input>
       
-                    <label htmlFor="profilepic">Profile picture:</label>
-                    <input  type="file" accept="image/*" onChange={this.changeProfilePic} id="profilepic" name="profile"></input>
-
+                    <label className='profilepicker' htmlFor="profilepic">Select profile:</label>
+                    <input type="file" accept="image/*" onChange={this.changeProfilePic} id="profilepic" name="profile"></input>
+                    
                     <label htmlFor='email'>Email: </label>
                     <input type='email' id='email' value={this.state.email} onChange={this.changeEmail}></input>
 
@@ -96,7 +103,7 @@ class GeneralInfo extends Component {
                     <input type='text' id='address' value={this.state.address} onChange={this.changeAddress}></input>
                 </div>
                 
-            </div>
+            
             
         )
     }
@@ -112,15 +119,36 @@ class GeneralCV extends Component {
         if(this.props.props !== null) {
             return (
                 <div className='panel'>
+                    <div className='profilepanel'>
+                        <h1>{this.props.props.name}</h1>
+                        <img src={this.props.props.profilePic} alt='preview'></img>
+                    </div>
+                    <div className='secondarypanel'>
+                        <p>Email: {this.props.props.email}</p>
+                        <p>Phone: {this.props.props.phone}</p>
+                        <p>Address: {this.props.props.address}</p>
+                    </div>
                     
-                    <h1>{this.props.props.name}</h1>
-                    <img src={this.props.props.profilePic} alt='preview'></img>
-                    <h1>{this.props.props.email}</h1>
-                    <h1>{this.props.props.phone}</h1>
-                    <h1>{this.props.props.address}</h1>
+                    
                 </div>
-                )
+            )
         }
+
+        return (
+            <div className='panel'>
+                <div className='profilepanel'>
+                    <h1>Full name</h1>
+                    <img src={logo} alt='preview'></img>
+                </div>
+                <div className='secondarypanel'>
+                    <p>Email: </p>
+                    <p>Phone: </p>
+                    <p>Address: </p>
+                </div>
+                
+                
+            </div>
+        )
         
     
         

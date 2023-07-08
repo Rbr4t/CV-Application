@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import '../styles/General.css'
+import '../styles/Education.css'
 
 class Education extends Component {
     constructor() {
@@ -25,10 +26,10 @@ class Education extends Component {
     
     render() {
       return (
-        <div>
+        <div className='panel-input'>
           {this.state.schools.map((obj, index) => (
 
-            <div key={index}>
+            <div key={index} className='form-elements'>
               <label htmlFor={`institution-${index}`}>School/University: </label>
               <input
                 id={`institution-${index}`}

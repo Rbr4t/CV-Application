@@ -61,6 +61,6 @@ function App() {
 
     </main>
   );
-}d
+}
 
 export default App;

@@ -1,0 +1,21 @@
+.panel {
+    background-color: aliceblue;
+    
+}
+
+.profilepanel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5rem;
+}
+
+.profilepanel>img {
+    max-height: 15rem;
+}
+
+.secondarypanel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
