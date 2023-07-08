@@ -54,9 +54,17 @@ function App() {
 
       <div className="cv">
         <GeneralCV props={data.general}/>
-        <SkillsCV props={data.skills}/>
-        <EducationCV props={data.education}/>
-        <ExperienceCV props={data.experience} />
+        <div className='border'></div>
+
+        <div className="secondary">
+          <SkillsCV props={data.skills}/>
+          <div>
+            <EducationCV props={data.education}/>
+            <div className='border'></div>
+            <ExperienceCV props={data.experience} />
+          </div>
+        </div>
+        
       </div>
 
     </main>

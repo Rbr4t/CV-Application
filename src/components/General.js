@@ -88,7 +88,7 @@ class GeneralInfo extends Component {
             
                 <div className='basic-info'>
                     <label htmlFor='name'>Full name: </label>
-                    <input id='name' value={this.state.name} onChange={this.changeName}></input>
+                    <input maxLength="30" id='name' value={this.state.name} onChange={this.changeName}></input>
       
                     <label className='profilepicker' htmlFor="profilepic">Select profile picture:</label>
                     <input type="file" accept="image/*" onChange={this.changeProfilePic} id="profilepic" name="profile"></input>
@@ -121,8 +121,9 @@ class GeneralCV extends Component {
                 <div className='panel'>
                     <div className='profilepanel'>
                         <h1>{this.props.props.name}</h1>
-                        <img src={this.props.props.profilePic} alt='preview'></img>
+                        <img className='profileimg' src={this.props.props.profilePic} alt='preview'></img>
                     </div>
+                    <div className='border'></div>
                     <div className='secondarypanel'>
                         <p>Email: {this.props.props.email}</p>
                         <p>Phone: {this.props.props.phone}</p>
@@ -140,6 +141,8 @@ class GeneralCV extends Component {
                     <h1>Full name</h1>
                     <img src={logo} alt='preview'></img>
                 </div>
+                <div className='border'></div>
+
                 <div className='secondarypanel'>
                     <p>Email: </p>
                     <p>Phone: </p>

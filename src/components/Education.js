@@ -99,7 +99,17 @@ class EducationCV extends Component {
                 </div>
             )
         }
-        return 
+        return (
+          <div>
+              <h1>Education:</h1>
+              <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+
+              </ul>
+          </div>
+      ) 
     }
 }
 

@@ -74,7 +74,14 @@ class SkillsCV extends Component {
                 </div>
             )
         }
-        return 
+        return (
+          <div>
+              <h1>Skills:</h1>
+              <ul>
+                  <li></li>
+              </ul>
+          </div>
+      )
     }
 }
 

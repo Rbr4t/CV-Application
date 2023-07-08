@@ -1,13 +1,15 @@
 .panel {
-    background-color: aliceblue;
     
 }
 
 .profilepanel {
+    padding: 3rem;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-evenly;
     gap: 5rem;
+    max-width: 100%;
 }
 
 .profilepanel>img {
@@ -18,4 +20,13 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+
+.border {
+    display: flex;
+    flex: 1 0 auto;
+    height: 8px;
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
 }

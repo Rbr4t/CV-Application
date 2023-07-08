@@ -99,7 +99,7 @@ class ExperienceCV extends Component {
         if(this.props.props !== null) {
             return (
                 <div>
-                    <h1>Previous work experiences:</h1>
+                    <h1>Experience:</h1>
                     
                         {this.props.props.experiences.map((prop, index) => {
                             return (
@@ -114,7 +114,19 @@ class ExperienceCV extends Component {
                 </div>
             )
         }
-        return 
+        return (
+          <div>
+              <h1>Experience:</h1>
+              <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+
+              </ul>
+                  
+          </div>
+      )
     }
 }
 

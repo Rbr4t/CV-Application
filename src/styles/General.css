@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     border: 0;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Work Sans', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 main {
     
@@ -16,11 +16,11 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-width: 25%;
+    min-width: 35%;
 }
 
 form>div {
-    background-color: rgb(86, 117, 209);
+    background-color: #5675d1;
     padding: 1rem;
     border-radius: 8px;
 }
@@ -42,6 +42,7 @@ input#profilepic {
 }
 
 .profilepicker {
+    font-size: medium;
     background-color: white;
     display: flex;
     margin-top: 15px;
@@ -64,7 +65,16 @@ input#profilepic {
 }
 
 .cv {
-    min-width: 60%;
+    min-width: 50%;
+    background-color: #5675d1;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.secondary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
 }
 
 button {
@@ -85,4 +95,8 @@ button:hover {
     flex-direction: column;
     gap: 0.25rem;
 
+}
+
+.profileimg {
+    max-height: 240px;
 }
