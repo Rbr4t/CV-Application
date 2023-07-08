@@ -1,4 +1,5 @@
 import { Component } from "react";
+import logo from '../styles/github-mark.png'
 
 class Navbar extends Component {
     constructor() {
@@ -7,9 +8,11 @@ class Navbar extends Component {
 
     render() {
         return (
-            <div>
+            <nav>
                 <h1>CV Creator</h1>
-            </div>
+
+                <a href="https://github.com/Rbr4t/CV-Application" target="_blank"><img style={{height: 50}} src={logo} alt="github link"></img></a>
+            </nav>
         )
     }
 }

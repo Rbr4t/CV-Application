@@ -66,11 +66,11 @@ class SkillsCV extends Component {
             return (
                 <div>
                     <h1>Skills:</h1>
-                    <ul>
+                    <ol>
                         {this.props.props.skills.map((prop) => {
                             return <li>{prop.skill}</li>
                         })}
-                    </ul>
+                    </ol>
                 </div>
             )
         }

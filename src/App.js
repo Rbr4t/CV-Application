@@ -2,6 +2,7 @@ import { GeneralCV, GeneralInfo } from "./components/General";
 import Skills, { SkillsCV } from "./components/Skills";
 import Education, { EducationCV } from "./components/Education";
 import Experience, { ExperienceCV } from "./components/PrevExperiance";
+import Navbar from "./components/Navbar";
 import { useState } from "react";
 import './index.css'
 
@@ -32,40 +33,45 @@ function App() {
 
   return (
     <main>
-      <form className="edit">
-        <div>
-          <h2>Personal information</h2>
-          <GeneralInfo callBackState={myCallBackGeneral} />
-        </div>
+      <Navbar />
 
-        <div>
-         <Skills callBackState={myCallBackSkills} />
-        </div>
-
-        <div>
-          <Education callBackState={myCallBackEducation} />
-        </div>
-
-        <div>
-          <Experience callBackState={myCallBackExperience} />
-        </div>
-      
-      </form>
-
-      <div className="cv">
-        <GeneralCV props={data.general}/>
-        <div className='border'></div>
-
-        <div className="secondary">
-          <SkillsCV props={data.skills}/>
+      <div className="main-section">
+        <form className="edit">
           <div>
-            <EducationCV props={data.education}/>
-            <div className='border'></div>
-            <ExperienceCV props={data.experience} />
+            <h2>Personal information</h2>
+            <GeneralInfo callBackState={myCallBackGeneral} />
           </div>
-        </div>
+
+          <div>
+          <Skills callBackState={myCallBackSkills} />
+          </div>
+
+          <div>
+            <Education callBackState={myCallBackEducation} />
+          </div>
+
+          <div>
+            <Experience callBackState={myCallBackExperience} />
+          </div>
         
+        </form>
+
+        <div className="cv">
+          <GeneralCV props={data.general}/>
+          <div className='border'></div>
+
+          <div className="secondary">
+            <SkillsCV props={data.skills}/>
+            <div>
+              <EducationCV props={data.education}/>
+              <div className='border'></div>
+              <ExperienceCV props={data.experience} />
+            </div>
+          </div>
+          
+        </div>
       </div>
+      
 
     </main>
   );

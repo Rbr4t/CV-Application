@@ -104,10 +104,10 @@ class ExperienceCV extends Component {
                         {this.props.props.experiences.map((prop, index) => {
                             return (
                                 <ul key={index}>
-                                    <li>{prop.company}</li>
-                                    <li>{prop.role}</li>
-                                    <li>{prop.period}</li>
-                                    <li>{prop.extra}</li>
+                                    <li>Firm: {prop.company}</li>
+                                    <li>Role: {prop.role}</li>
+                                    <li>Started: {prop.period}</li>
+                                    <li>Extra info: {prop.extra}</li>
                                 </ul>
                             )
                         })}

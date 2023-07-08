@@ -90,9 +90,9 @@ class EducationCV extends Component {
                         {this.props.props.schools.map((prop, index) => {
                             return (
                                 <ul key={index}>
-                                    <li>{prop.institution}</li>
-                                    <li>{prop.type}</li>
-                                    <li>{prop.period}</li>
+                                    <li>Institution: {prop.institution}</li>
+                                    <li>Degree/Type: {prop.type}</li>
+                                    <li>Graduated: {prop.period}</li>
                                 </ul>
                             )
                         })}
